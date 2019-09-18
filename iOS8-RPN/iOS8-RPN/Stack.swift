@@ -18,6 +18,10 @@ public struct Stack<Element>: ExpressibleByArrayLiteral {
     
     var items: [Element]
     
+    public var count: Int {
+        return items.count
+    }
+    
     public init(_ array: [Element] = []) {
         self.items = array
     }
@@ -38,5 +42,4 @@ public struct Stack<Element>: ExpressibleByArrayLiteral {
     public func peek() -> Element? {
         return items.last
     }
-    
 }
