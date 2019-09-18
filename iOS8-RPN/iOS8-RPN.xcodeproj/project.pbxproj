@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		BD070AA4233298A900918103 /* iOS8_RPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD070A9A233298A900918103 /* iOS8_RPN.framework */; };
 		BD070AAB233298AA00918103 /* iOS8_RPN.h in Headers */ = {isa = PBXBuildFile; fileRef = BD070A9D233298A900918103 /* iOS8_RPN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDD0CB592332A1CC00F02CA8 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0CB582332A1CC00F02CA8 /* Stack.swift */; };
+		BDD0CB5B2332A1DD00F02CA8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0CB5A2332A1DD00F02CA8 /* Calculator.swift */; };
+		BDD0CB5D2332A1EC00F02CA8 /* DigitAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0CB5C2332A1EC00F02CA8 /* DigitAccumulator.swift */; };
+		BDD0CB5F2332A20500F02CA8 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0CB5E2332A20500F02CA8 /* StackTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,10 @@
 		BD070A9E233298A900918103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD070AA3233298A900918103 /* iOS8-RPNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS8-RPNTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD070AAA233298AA00918103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD0CB582332A1CC00F02CA8 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		BDD0CB5A2332A1DD00F02CA8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		BDD0CB5C2332A1EC00F02CA8 /* DigitAccumulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitAccumulator.swift; sourceTree = "<group>"; };
+		BDD0CB5E2332A20500F02CA8 /* StackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,9 @@
 			children = (
 				BD070A9D233298A900918103 /* iOS8_RPN.h */,
 				BD070A9E233298A900918103 /* Info.plist */,
+				BDD0CB582332A1CC00F02CA8 /* Stack.swift */,
+				BDD0CB5A2332A1DD00F02CA8 /* Calculator.swift */,
+				BDD0CB5C2332A1EC00F02CA8 /* DigitAccumulator.swift */,
 			);
 			path = "iOS8-RPN";
 			sourceTree = "<group>";
@@ -79,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				BD070AAA233298AA00918103 /* Info.plist */,
+				BDD0CB5E2332A20500F02CA8 /* StackTests.swift */,
 			);
 			path = "iOS8-RPNTests";
 			sourceTree = "<group>";
@@ -145,9 +157,11 @@
 				TargetAttributes = {
 					BD070A99233298A900918103 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					BD070AA2233298A900918103 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -191,6 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD0CB592332A1CC00F02CA8 /* Stack.swift in Sources */,
+				BDD0CB5D2332A1EC00F02CA8 /* DigitAccumulator.swift in Sources */,
+				BDD0CB5B2332A1DD00F02CA8 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD0CB5F2332A20500F02CA8 /* StackTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +355,7 @@
 		BD070AAF233298AA00918103 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -354,6 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.iOS8-RPN";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,6 +382,7 @@
 		BD070AB0233298AA00918103 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +408,8 @@
 		BD070AB2233298AA00918103 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "iOS8-RPNTests/Info.plist";
@@ -397,6 +420,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.iOS8-RPNTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -405,6 +429,8 @@
 		BD070AB3233298AA00918103 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "iOS8-RPNTests/Info.plist";
