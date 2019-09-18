@@ -23,6 +23,20 @@
 			remoteGlobalIDString = BD070ABC233298F800918103;
 			remoteInfo = "iOS8-Calculator";
 		};
+		BDD0CB542332A08900F02CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDD0CB4F2332A08900F02CA8 /* iOS8-RPN.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BD070A9A233298A900918103;
+			remoteInfo = "iOS8-RPN";
+		};
+		BDD0CB562332A08900F02CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDD0CB4F2332A08900F02CA8 /* iOS8-RPN.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BD070AA3233298A900918103;
+			remoteInfo = "iOS8-RPNTests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +50,7 @@
 		BD070AD7233298F900918103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD070AE0233299B800918103 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BD070AE2233299F400918103 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		BDD0CB4F2332A08900F02CA8 /* iOS8-RPN.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "iOS8-RPN.xcodeproj"; path = "../iOS8-RPN/iOS8-RPN.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +76,7 @@
 			children = (
 				BD070ABF233298F800918103 /* iOS8-Calculator */,
 				BD070AD4233298F900918103 /* iOS8-CalculatorUITests */,
+				BDD0CB4E2332A07C00F02CA8 /* Frameworks */,
 				BD070ABE233298F800918103 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +110,23 @@
 				BD070AD7233298F900918103 /* Info.plist */,
 			);
 			path = "iOS8-CalculatorUITests";
+			sourceTree = "<group>";
+		};
+		BDD0CB4E2332A07C00F02CA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0CB4F2332A08900F02CA8 /* iOS8-RPN.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDD0CB502332A08900F02CA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0CB552332A08900F02CA8 /* iOS8_RPN.framework */,
+				BDD0CB572332A08900F02CA8 /* iOS8-RPNTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +197,12 @@
 			mainGroup = BD070AB4233298F800918103;
 			productRefGroup = BD070ABE233298F800918103 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BDD0CB502332A08900F02CA8 /* Products */;
+					ProjectRef = BDD0CB4F2332A08900F02CA8 /* iOS8-RPN.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BD070ABC233298F800918103 /* iOS8-Calculator */,
@@ -171,6 +210,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BDD0CB552332A08900F02CA8 /* iOS8_RPN.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = iOS8_RPN.framework;
+			remoteRef = BDD0CB542332A08900F02CA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDD0CB572332A08900F02CA8 /* iOS8-RPNTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iOS8-RPNTests.xctest";
+			remoteRef = BDD0CB562332A08900F02CA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BD070ABB233298F800918103 /* Resources */ = {
