@@ -45,16 +45,19 @@ public struct DigitAccumulator {
     public var value: Double? {
         
         // [Digits] -> [String] -> String
-        let numberString = digits.map { digit -> String in
+        let numberString = self.stringValue
+        return Double(numberString)
+    }
+    
+    public var stringValue: String {
+        return digits.map { digit -> String in
             switch digit {
             case .decimalPoint:
                 return "."
             case .number(let value):
                 return String(value)
             }
-        }.joined()
-        
-        return Double(numberString)
+            }.joined()
     }
     
     mutating public func clear() {

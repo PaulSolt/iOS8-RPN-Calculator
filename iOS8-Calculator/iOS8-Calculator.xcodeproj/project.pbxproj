@@ -13,6 +13,9 @@
 		BD070AD6233298F900918103 /* iOS8_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD070AD5233298F900918103 /* iOS8_CalculatorUITests.swift */; };
 		BD070AE1233299B800918103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD070AE0233299B800918103 /* Main.storyboard */; };
 		BD070AE3233299F400918103 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD070AE2233299F400918103 /* CalculatorViewController.swift */; };
+		BDD0CB642332B6D200F02CA8 /* iOS8_RPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD0CB552332A08900F02CA8 /* iOS8_RPN.framework */; };
+		BDD0CB652332B7DE00F02CA8 /* iOS8_RPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD0CB552332A08900F02CA8 /* iOS8_RPN.framework */; };
+		BDD0CB662332B7DE00F02CA8 /* iOS8_RPN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDD0CB552332A08900F02CA8 /* iOS8_RPN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,28 @@
 			remoteGlobalIDString = BD070AA3233298A900918103;
 			remoteInfo = "iOS8-RPNTests";
 		};
+		BDD0CB672332B7DE00F02CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDD0CB4F2332A08900F02CA8 /* iOS8-RPN.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BD070A99233298A900918103;
+			remoteInfo = "iOS8-RPN";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BDD0CB692332B7DE00F02CA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BDD0CB662332B7DE00F02CA8 /* iOS8_RPN.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BD070ABD233298F800918103 /* iOS8-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS8-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD0CB652332B7DE00F02CA8 /* iOS8_RPN.framework in Frameworks */,
+				BDD0CB642332B6D200F02CA8 /* iOS8_RPN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,10 +165,12 @@
 				BD070AB9233298F800918103 /* Sources */,
 				BD070ABA233298F800918103 /* Frameworks */,
 				BD070ABB233298F800918103 /* Resources */,
+				BDD0CB692332B7DE00F02CA8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BDD0CB682332B7DE00F02CA8 /* PBXTargetDependency */,
 			);
 			name = "iOS8-Calculator";
 			productName = "iOS8-Calculator";
@@ -273,6 +301,11 @@
 			isa = PBXTargetDependency;
 			target = BD070ABC233298F800918103 /* iOS8-Calculator */;
 			targetProxy = BD070AD2233298F900918103 /* PBXContainerItemProxy */;
+		};
+		BDD0CB682332B7DE00F02CA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "iOS8-RPN";
+			targetProxy = BDD0CB672332B7DE00F02CA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -407,6 +440,7 @@
 		BD070ADB233298F900918103 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
@@ -425,6 +459,7 @@
 		BD070ADC233298F900918103 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
