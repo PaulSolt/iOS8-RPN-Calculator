@@ -33,11 +33,32 @@ public struct DigitAccumulator {
             if digits.contains(.decimalPoint) {
                 throw DigitAccumulatorError.extraDecimalPoint
             }
-        default:
-            print("Other")
+        case .number(let value):
+            if value > 9 || value < 0 {
+                throw DigitAccumulatorError.invalidNumber
+            }
         }
         
         digits.append(digit)
+    }
+    
+    public var value: Double? {
+        
+        // [Digits] -> [String] -> String
+        let numberString = digits.map { digit -> String in
+            switch digit {
+            case .decimalPoint:
+                return "."
+            case .number(let value):
+                return String(value)
+            }
+        }.joined()
+        
+        return Double(numberString)
+    }
+    
+    mutating public func clear() {
+        digits.removeAll()
     }
     
 }
